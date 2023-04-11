@@ -12,7 +12,7 @@ LO+    |  10
 SDN(shutdown) | Not Used
 
 ECG Lobe points:
-[ECG label](ECG_label_body.jpg)
+![ECG label](ECG_label_body.jpg)
 
 IMP Reference links:
 
