@@ -11,6 +11,9 @@ LO-    |  11
 LO+    |  10
 SDN(shutdown) | Not Used
 
+ECG Lobe points:
+[ECG label](ECG_label_body.jpg)
+
 IMP Reference links:
 
 Automatic startup of the linux programs:
