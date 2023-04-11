@@ -1,0 +1,11 @@
+libatlas3-base
+pyserial
+python-time
+pandas
+matplotlib
+gspread
+scipy
+neurokit2
+oauth2client
+pprintpp
+numpy
