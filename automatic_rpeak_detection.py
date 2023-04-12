@@ -68,12 +68,15 @@ while True:
         if t%300==0:
 #             plt.plot(t_list[:-1], bpm_list[:-1])
             sheet.insert_row(bpm_list, int(t/300))
-            _, rpeaks = nk.ecg_peaks(bpm_list, sampling_rate=250)
-            plot = nk.events_plot(rpeaks['ECG_R_Peaks'], bpm_list)
-            print(rpeaks['ECG_R_Peaks'])
-            measure_rpeak_intervals(rpeaks['ECG_R_Peaks'], prev_value)
+            try:
+                _, rpeaks = nk.ecg_peaks(bpm_list, sampling_rate=250)
+                plot = nk.events_plot(rpeaks['ECG_R_Peaks'], bpm_list)
+                print(rpeaks['ECG_R_Peaks'])
+                measure_rpeak_intervals(rpeaks['ECG_R_Peaks'], prev_value)
+                plt.show()
+            except:
+                print("The received signal does not seem to be an ECG input")            
             
-            plt.show()
             bpm_list.clear()
             t_list.clear()
 
@@ -82,4 +85,5 @@ while True:
         print ("\nExiting.....")  
 
         break
+
 
